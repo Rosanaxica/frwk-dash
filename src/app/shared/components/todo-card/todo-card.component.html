@@ -1,0 +1,21 @@
+<mat-card
+  class="todo-card-container d-flex flex-column justify-content-between mb-3"
+>
+  <div class="row d-flex justify-content-between p-2 flex-nowrap">
+    <div class="d-flex justify-content-start">
+      <div class="col-4">
+        <app-user-avatar></app-user-avatar>
+      </div>
+      <div class="col-7">
+        <h3 class="todo-card-title">{{ todo.title }}</h3>
+        <span class="todo-card-user">{{ todo.userId }}</span>
+      </div>
+    </div>
+    <div class="col-1"><mat-checkbox *ngIf="todo.complete"></mat-checkbox></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-button-group></app-button-group>
+    </div>
+  </div>
+</mat-card>

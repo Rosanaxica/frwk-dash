@@ -1,0 +1,21 @@
+<app-page-title title="Criar Photo"></app-page-title>
+<div>
+    <form  [formGroup]="formPhoto" >
+    <mat-card class="create-album-container d-flex flex-column justify-content-between p-4">
+        <mat-form-field appearance="fill" color="accent" floatLabel="always" class="full-width" > 
+            <mat-label>Titulo</mat-label>
+            <input matInput placeholder="label" value="value" class="" formControlName="title">
+        </mat-form-field>
+        <mat-form-field appearance="fill" color="accent" floatLabel="always" class="full-width" > 
+            <mat-label>Caminho da Imagem</mat-label>
+            <input matInput placeholder="label" value="value" class="" formControlName="url">
+        </mat-form-field>
+        <mat-form-field appearance="fill" color="accent" floatLabel="always" class="full-width" > 
+            <mat-label>Imagem prévia </mat-label>
+            <input matInput placeholder="label" value="value" class="" formControlName="thumbnailUrl">
+        </mat-form-field>
+        
+        <app-button-group (primaryButton)="submit(formPhoto.value)"  (secondaryButton)="resetForm()"></app-button-group>
+    </mat-card>
+</form>
+</div>

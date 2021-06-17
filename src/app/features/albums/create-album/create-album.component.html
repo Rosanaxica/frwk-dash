@@ -1,0 +1,12 @@
+<app-page-title title="Criar Album"></app-page-title>
+<div>
+    <form  [formGroup]="formAlbum" >
+    <mat-card class="create-album-container d-flex flex-column justify-content-between p-4">
+        <mat-form-field appearance="fill" color="accent" floatLabel="always" class="full-width" > 
+            <mat-label>Legacy form field</mat-label>
+            <input matInput placeholder="label" value="value" class="" formControlName="title">
+        </mat-form-field>
+        <app-button-group (primaryButton)="submit(formAlbum.value)"  (secondaryButton)="resetForm()"></app-button-group>
+    </mat-card>
+</form>
+</div>

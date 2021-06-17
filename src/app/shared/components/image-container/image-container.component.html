@@ -1,0 +1,14 @@
+<mat-card class="image-container">
+  <mat-card-header class="image-container-title">
+    <mat-card-title>{{ image.title }}</mat-card-title>
+  </mat-card-header>
+
+  <img
+    mat-card-image
+    src="https://picsum.photos/100/100"
+    alt="Photo of a album"
+  />
+  <mat-card-actions>
+    <app-button-group (primaryButton)="editItem()"  (secondaryButton)="deleteItem()"></app-button-group>
+  </mat-card-actions>
+</mat-card>

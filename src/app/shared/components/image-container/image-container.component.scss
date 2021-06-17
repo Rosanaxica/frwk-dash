@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/variables";
+.image-container {
+  min-height: 200px;
+  img {
+    min-height: 100px;
+    max-height: 200px;
+  }
+  &-title {
+    color: map-get($colors, title);
+    font-size: 20px;
+    font-weight: bolder;
+    height: 55px;
+  }
+}

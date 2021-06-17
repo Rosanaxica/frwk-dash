@@ -1,0 +1,18 @@
+<div class="todos-container">
+  <app-page-title title="Tarefas"></app-page-title>
+
+  <mat-tab-group color="primary" backgroundColor="primary" dynamicHeight>
+    <mat-tab
+      label="Ativas"
+      class="d-flex justify-content-between todos-container-tab"
+    >
+      <div class="row my-3 todos-container-tab-content">
+        <div class="col" *ngFor="let todo of listTodos">
+          <app-todo-card [todo]="todo" (onEditClick)="editItem($event)" (onDeleteClick)="deleteItem($event)"></app-todo-card>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Concluídas">Concluidas </mat-tab>
+  </mat-tab-group>
+</div>
+<app-float-button class="float" (click)="addTodo()"></app-float-button>

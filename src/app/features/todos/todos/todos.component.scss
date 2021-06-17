@@ -1,0 +1,14 @@
+.todos {
+  &-container {
+    &-tabs {
+      &-content {
+        min-height: 800px;
+      }
+    }
+  }
+}
+.float {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}

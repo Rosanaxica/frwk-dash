@@ -1,0 +1,6 @@
+@import "../../../../assets/styles/variables";
+.page-title {
+  &-text {
+    color: map-get($colors, title);
+  }
+}
