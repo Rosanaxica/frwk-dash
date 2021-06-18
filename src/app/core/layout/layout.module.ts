@@ -1,5 +1,5 @@
 import { SidenavService } from './sidenav.service';
-import { DashboardComponent } from '../../public/components/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from './../shared.module';
 import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';

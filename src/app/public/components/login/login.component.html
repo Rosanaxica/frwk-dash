@@ -1,7 +1,21 @@
 <div class="login-container">
-    <section class="card">
-        <img src="../../../assets/img/404.png" />
-        <span class="title">Página não encontrada</span>
-        <button class="btn btn-warning mt-3">Voltar</button>
-      </section>
-</div>>
+  <section class="card d-flex justify-content-between flex-column">
+    <img src="../../../../assets/img/login_person.png" />
+    <div class="buttons d-flex justify-content-between my-2">
+      <button mat-button>1º Acesso</button>
+      <button mat-button>Esqueci a senha</button>
+    </div>
+    <div class="inputs">
+      <mat-form-field class="full-width" floatLabel="always" color="accent" appearance="fill" >
+        <mat-label>E-mail</mat-label>
+        <input  type="email"  matInput placeholder="email@email.com"  />
+      </mat-form-field>
+      <mat-form-field class="full-width" floatLabel="always"  color="accent" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput placeholder="*****" />
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="gotoDash()">Acessar</button>
+  </section>
+</div>
+>

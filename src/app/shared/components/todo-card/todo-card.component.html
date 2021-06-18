@@ -7,11 +7,11 @@
         <app-user-avatar></app-user-avatar>
       </div>
       <div class="col-7">
-        <h3 class="todo-card-title">{{ todo.title }}</h3>
+        <h3 class="todo-card-title">{{ todo.title|slice:0:30 }}...</h3>
         <span class="todo-card-user">{{ todo.userId }}</span>
       </div>
     </div>
-    <div class="col-1"><mat-checkbox *ngIf="todo.complete"></mat-checkbox></div>
+    <div class="col-1"><mat-checkbox [checked]="todo.completed"></mat-checkbox></div>
   </div>
   <div class="row">
     <div class="col-12">

@@ -1,6 +1,6 @@
 export interface IAlbum {
     userId:number;
-    id: number;
+    id?: number;
     body: string;
     title: string;
 }

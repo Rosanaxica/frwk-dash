@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { Observable } from 'rxjs';
 import { IUser } from '../interfaces/IUser';
 import { Injectable } from '@angular/core';
@@ -10,19 +11,19 @@ import { map } from 'rxjs/operators';
 export class UserService {
 
   constructor(public http: HttpClient) { }
-  private context = "/user";
+  private context = "/users";
 
 
   getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(this.context).pipe(map((resp) => resp));
+    return this.http.get<IUser[]>(`${environment.baseUrl}${this.context}`).pipe(map((resp) => resp));
   }
 
-  getUser(): Observable<IUser> {
-    return this.http.get<IUser>(this.context).pipe(map((resp) => resp));
+  getUserById(userId): Observable<IUser> {
+    return this.http.get<IUser>(`${environment.baseUrl}${this.context}/${userId}`).pipe(map((resp) => resp));
   }
 
   addUser(user: IUser) {
-    return this.http.post(this.context, user).pipe(map((resp) => resp));
+    return this.http.post(`${environment.baseUrl}${this.context}`, user).pipe(map((resp) => resp));
   }
 
   updateUser(User: IUser) {

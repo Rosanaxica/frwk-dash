@@ -11,7 +11,7 @@ import { UserAvatarComponent } from "./components/user-avatar/user-avatar.compon
 import { ButtonGroupComponent } from "./components/button-group/button-group.component";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
 import { FloatButtonComponent } from "./components/float-button/float-button.component";
-import { TotalCardComponent } from "./total-card/total-card.component";
+import { TotalCardComponent } from "./components/total-card/total-card.component";
 import { DashboardSpotlightCardComponent } from "./components/dashboard-spotlight-card/dashboard-spotlight-card.component";
 import { ChartCardComponent } from './components/chart-card/chart-card.component';
 import { PostCardComponent } from './components/post-card/post-card.component';

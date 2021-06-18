@@ -16,10 +16,10 @@ export class PostsComponent implements OnInit {
   ) {}
   protected listPost: Array<IPost> = [];
   ngOnInit() {
-    this.getTodosList();
+    this.getPostsList();
   }
 
-  getTodosList() {
+  getPostsList() {
     this.postService.getPosts().subscribe((resp) => (this.listPost = resp));
   }
 
@@ -31,7 +31,7 @@ export class PostsComponent implements OnInit {
     let post: IPost = evt;
     this.postService.deletePost(post).subscribe((resp) => resp);
   }
-  addTodo() {
+  addPost() {
     this.router.navigate(["create"], { relativeTo: this.route });
   }
 }

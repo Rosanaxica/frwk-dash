@@ -25,18 +25,17 @@ export class CreatePhotoComponent implements OnInit {
   createForm() {
     this.formPhoto = new FormGroup({
       title: new FormControl("", Validators.required),
-      url: new FormControl("", Validators.required) ,
-      thumbnailUrl: new FormControl("", Validators.required)
+      url: new FormControl("", Validators.required),
+      thumbnailUrl: new FormControl("", Validators.required),
     });
   }
 
-  createTodo() {
+  createPhoto() {
     let photo: IPhoto = {
-      albumId:1,
+      albumId: 1,
       title: this.formPhoto.controls["title"].value,
-      url:this.formPhoto.controls["url"].value,
-      thumbnailUrl:this.formPhoto.controls["thumbnailUrl"].value
-     
+      url: this.formPhoto.controls["url"].value,
+      thumbnailUrl: this.formPhoto.controls["thumbnailUrl"].value,
     };
     this.photoService.addPhoto(photo).subscribe((resp) => resp);
   }
@@ -44,7 +43,7 @@ export class CreatePhotoComponent implements OnInit {
   submit() {
     this.formPhoto.markAllAsTouched;
     if (this.formPhoto.valid) {
-      this.createTodo();
+      this.createPhoto();
     }
   }
   resetForm() {

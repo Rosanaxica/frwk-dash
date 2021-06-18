@@ -1,8 +1,8 @@
 <mat-card class="dashboard-spotlight-card-container d-flex justify-content-between" >
     <div>
         <h2 class="title">Tarefa mais antiga </h2>
-        <p class="text py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat laborum officia, asperiores vitae aliquid culpa minus voluptas molestias quaerat accusantium quibusdam. </p>
-        <button mat-raised-button color="accent">Ver tarefa</button>
+        <p class="text py-4">{{task?.title}}</p>
+        <button mat-raised-button color="accent" (click)="viewTaskClick($event)">Ver tarefa</button>
 
     </div>
     <div>

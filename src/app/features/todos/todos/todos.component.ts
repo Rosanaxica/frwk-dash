@@ -27,6 +27,7 @@ export class TodosComponent implements OnInit {
     let todo: ITodo = evt;
     this.todoService.updateTodo(todo).subscribe((resp) => resp);
   }
+
   deleteItem(evt) {
     let todo: ITodo = evt;
     this.todoService.deleteTodo(todo).subscribe((resp) => resp);

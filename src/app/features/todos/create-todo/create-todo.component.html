@@ -3,8 +3,8 @@
     <form  [formGroup]="formTodo" >
     <mat-card class="create-todo-container d-flex flex-column justify-content-between p-4">
         <mat-form-field appearance="fill" color="accent" floatLabel="always" class="full-width" > 
-            <mat-label>Legacy form field</mat-label>
-            <input matInput placeholder="label" value="value" class="" formControlName="title">
+            <mat-label>Título</mat-label>
+            <input matInput placeholder="Digite o titulo da tarefa" value="" class="" formControlName="title">
         </mat-form-field>
         <app-button-group (primaryButton)="submit()"  (secondaryButton)="resetForm()"></app-button-group>
     </mat-card>

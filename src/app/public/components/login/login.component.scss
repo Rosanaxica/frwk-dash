@@ -1,6 +1,6 @@
 @import "../../../../assets/styles/variables";
 .login-container {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   background-image: url(../../../../assets/img/wallpaper.png);
   background-size: cover;
   height: 100vh;
@@ -8,16 +8,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.card {
-  background-color: white;
-  width: 25vw;
-  height: 80vh;
-  padding: 30px;
-}
-.title {
-  color: map-get($colors, title);
-  font-size: 80px;
-  text-align: center;
-  font-weight: bold;
+  .card {
+    background-color: white;
+    width: 25vw;
+    height: 80vh;
+    padding: 30px;
+  }
+  .title {
+    color: map-get($colors, title);
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .full-width {
+    width: 100%;
+  }
 }
