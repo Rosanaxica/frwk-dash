@@ -43,15 +43,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 # FrwkDash - Próximos Passos
-*Ações de Editar e Deletar
-*Autenticação de Usuário  no Login e Serviço Interno
-*Landing Page conforme prótótipo
-*Páginação de resultados (ng-boostrap)
-*Refinamento de componentes e ações 
-*Fazer requisições interdepentes
-*Responsividade
-*Base Service para requisições http
-*Arquitetura BEM css para melhor leitura das classes
-*Melhoria da semantica dos elementos para melhor acessibilidade do conteudo
+- Ações de Editar e Deletar
+* Autenticação de Usuário  no Login e Serviço Interno
+* Landing Page conforme prótótipo
+* Páginação de resultados (ng-boostrap)
+* Refinamento de componentes e ações 
+* Fazer requisições interdepentes
+* Responsividade
+* Base Service para requisições http
+* Arquitetura BEM css para melhor leitura das classes
+* Melhoria da semantica dos elementos para melhor acessibilidade do conteudo
 
 
