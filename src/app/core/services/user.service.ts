@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { IUser } from './../../interfaces/IUser';
+import { IUser } from '../interfaces/IUser';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';

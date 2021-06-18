@@ -1,4 +1,4 @@
-import { IPhoto } from "./../../../interfaces/IPhoto";
+import { IPhoto } from "../../../core/interfaces/IPhoto";
 import {
   FormBuilder,
   FormGroup,
@@ -6,7 +6,7 @@ import {
   Validators,
 } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
-import { PhotosService } from "src/app/shared/services/photos.service";
+import { PhotosService } from "src/app/core/services/photos.service";
 
 @Component({
   templateUrl: "./create-photo.component.html",

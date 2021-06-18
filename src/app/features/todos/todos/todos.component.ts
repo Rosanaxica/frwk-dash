@@ -1,5 +1,5 @@
-import { ITodo } from "./../../../interfaces/ITodo";
-import { TodoService } from "./../../../shared/services/todo.service";
+import { ITodo } from "../../../core/interfaces/ITodo";
+import { TodoService } from "../../../core/services/todo.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 

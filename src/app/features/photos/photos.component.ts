@@ -1,5 +1,5 @@
-import { IPhoto } from "./../../interfaces/IPhoto";
-import { PhotosService } from "./../../shared/services/photos.service";
+import { IPhoto } from "../../core/interfaces/IPhoto";
+import { PhotosService } from "../../core/services/photos.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 

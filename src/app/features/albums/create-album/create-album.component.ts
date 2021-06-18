@@ -1,9 +1,9 @@
-import { AlbumService } from './../../../shared/services/album.service';
-import { IAlbum } from './../../../interfaces/IAlbum';
+import { AlbumService } from '../../../core/services/album.service';
+import { IAlbum } from '../../../core/interfaces/IAlbum';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ITodo } from 'src/app/interfaces/ITodo';
-import { TodoService } from 'src/app/shared/services/todo.service';
+import { ITodo } from 'src/app/core/interfaces/ITodo';
+import { TodoService } from 'src/app/core/services/todo.service';
 
 @Component({
   templateUrl: './create-album.component.html',

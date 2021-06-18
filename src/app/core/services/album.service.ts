@@ -1,5 +1,5 @@
-import { environment } from './../../../environments/environment';
-import { IAlbum } from './../../interfaces/IAlbum';
+import { environment } from '../../../environments/environment';
+import { IAlbum } from '../interfaces/IAlbum';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';

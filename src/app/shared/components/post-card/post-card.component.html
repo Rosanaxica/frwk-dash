@@ -1,0 +1,19 @@
+<mat-card class="post-card-container">
+  <img
+    mat-card-image
+    src="https://picsum.photos/100/100"
+    alt="Photo of a album"
+  />
+  <mat-card-content class="d-flex">
+    <div class="col-2">
+      <app-user-avatar></app-user-avatar>
+    </div>
+    <div class="col-10">
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <p>{{ post.body | slice: 0:100 }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-button-group></app-button-group>
+  </mat-card-actions>
+</mat-card>

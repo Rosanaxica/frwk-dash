@@ -26,10 +26,10 @@ export class ButtonGroupComponent implements OnInit {
 
   ngOnInit() {}
 
-  onPrimaryButtonClick(evt) {
+  primaryButtonClick(evt) {
     this.primaryButton.emit(evt);
   }
-  onSecondaryButtonClick(evt) {
+  secondaryButtonClick(evt) {
     this.secondaryButton.emit(evt);
   }
 }

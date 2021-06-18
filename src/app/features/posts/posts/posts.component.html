@@ -1,0 +1,17 @@
+<div class="posts-container">
+  <app-page-title title="Postagens"></app-page-title>
+
+  <div class="col" *ngFor="let post of listPost">
+        <div class="row my-3">
+        <div class="col-12">
+
+            <app-post-card
+              [post]="post"
+              (onEditClick)="editItem($event)"
+              (onDeleteClick)="deleteItem($event)"
+            ></app-post-card>
+        </div>
+    </div>
+  </div>
+</div>
+<app-float-button class="float" (click)="addTodo()"></app-float-button>

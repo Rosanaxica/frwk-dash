@@ -1,10 +1,31 @@
-$colors:(
-backgroundColor:#E5E5E5,
-primary:#8665F0,
-secondary:#FA6173,
-title:#1A63DB,
-text:#909090,
-textLight:#909090,
-disabled:#6b6b6b
+@import "~@angular/material/theming";
 
-)
+$colors: (
+  backgroundColor: #e5e5e5,
+  primary: #8665f0,
+  secondary: #fa6173,
+  title: #1a63db,
+  text: #909090,
+  textLight: #909090,
+  disabled: #6b6b6b,
+);
+$light: 100;
+
+$app-primary: mat-palette($mat-deep-purple);
+$app-accent: mat-palette($mat-pink);
+$app-secondary: mat-palette($mat-blue);
+$app-spotlight: mat-palette($mat-amber);
+$app-warn: mat-palette($mat-pink);
+
+$primary: mat-color($app-primary);
+$accent: mat-color($app-accent);
+$warn: mat-color($app-warn);
+$primary: mat-color($app-primary);
+$secondary: mat-color($app-secondary);
+
+$primary-light: mat-color($app-primary, $light);
+$accent-light: mat-color($app-accent, $light);
+$warn-light: mat-color($app-warn, $light);
+$primary-light: mat-color($app-primary, $light);
+$secondary-light: mat-color($app-secondary, $light);
+$spotlight-light: mat-color($app-spotlight, $light);

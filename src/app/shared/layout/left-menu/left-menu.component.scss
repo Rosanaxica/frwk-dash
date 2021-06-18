@@ -1,6 +1,9 @@
-.sidenav_container {
+.sidenav-container {
     min-width: 60px; 
     height: calc(100vh - 200px);
+    .email{
+      font-size: 14px;
+    }
   }
   
   .jim {

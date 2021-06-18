@@ -25,7 +25,8 @@ export class LeftMenuComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSinenavToggle() {
+  onSidenavToggle() {
+    debugger
     this.sideNavState = !this.sideNavState
     
     setTimeout(() => {

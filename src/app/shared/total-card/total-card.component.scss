@@ -1,0 +1,29 @@
+@import "../../../assets/styles/variables";
+.total-card-container {
+  width: 20vw;
+  background-image: url('../../../assets/img/card_background.png');
+  background-position: right;
+  background-size:contain;
+  &-number {
+    font-size: 60px;
+    display: block;
+  }
+
+  &-description {
+    font-size: 40px;
+  }
+
+  &.primary {
+    background-color: $primary;
+    color: white;
+  }
+    
+  &.secondary {
+    background-color: $accent;
+    color: white;
+  }
+  &.title {
+    background-color:$secondary;
+    color: white;
+  }
+}

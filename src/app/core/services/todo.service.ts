@@ -1,9 +1,9 @@
-import { environment } from './../../../environments/environment.prod';
+import { environment } from '../../../environments/environment.prod';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { ITodo } from "src/app/interfaces/ITodo";
+import { ITodo } from "src/app/core/interfaces/ITodo";
 
 @Injectable({
   providedIn: "root",

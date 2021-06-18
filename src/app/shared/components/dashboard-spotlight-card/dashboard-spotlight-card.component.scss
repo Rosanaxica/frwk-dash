@@ -1,0 +1,13 @@
+@import "../../../../assets/styles/variables";
+
+.dashboard-spotlight-card {
+  &-container {
+    background-color: $spotlight-light;
+    & .title {
+      font-size: 27px;
+    }
+    & .text {
+      color: map-get($colors, text);
+    }
+  }
+}

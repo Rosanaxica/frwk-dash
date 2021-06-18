@@ -1,5 +1,5 @@
-import { AlbumService } from "./../../../shared/services/album.service";
-import { IAlbum } from "./../../../interfaces/IAlbum";
+import { AlbumService } from "../../../core/services/album.service";
+import { IAlbum } from "../../../core/interfaces/IAlbum";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 

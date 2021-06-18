@@ -1,3 +1,5 @@
+import { SidenavService } from './sidenav.service';
+import { DashboardComponent } from '../../public/components/dashboard/dashboard.component';
 import { SharedModule } from './../shared.module';
 import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
@@ -8,12 +10,13 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, LeftMenuComponent],
+  declarations: [LayoutComponent, HeaderComponent, LeftMenuComponent,DashboardComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    SharedModule
+    SharedModule,
     
-  ]
+  ],
+  providers: [ SidenavService ],
 })
 export class LayoutModule { }

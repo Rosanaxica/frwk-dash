@@ -1,4 +1,4 @@
-import { ITodo } from './../../../interfaces/ITodo';
+import { ITodo } from '../../../core/interfaces/ITodo';
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
