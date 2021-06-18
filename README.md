@@ -55,5 +55,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Melhoria da semantica dos elementos para melhor acessibilidade do conteudo
 * testes unitátios(jasmine e karma)
 * testes-end-to-end (cypress)
+* melhoria na componentização do grupo de botões 
+
 
 
