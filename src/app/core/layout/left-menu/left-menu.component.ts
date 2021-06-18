@@ -1,4 +1,4 @@
-import { SidenavService } from "./../sidenav.service";
+import { SidenavService } from "../sidenav.service";
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { onSideNavChange, animateText } from "../animations/animations";
 

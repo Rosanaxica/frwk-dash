@@ -1,8 +1,8 @@
-import { AlbumService } from "./../../../core/services/album.service";
-import { TodoService } from "./../../../core/services/todo.service";
-import { PostService } from "./../../../core/services/post.service";
-import { SharedModule } from "../../shared.module";
-import { MaterialModule } from "../../material/material.module";
+import { AlbumService } from "../../services/album.service";
+import { TodoService } from "../../services/todo.service";
+import { PostService } from "../../services/post.service";
+import { SharedModule } from "../../../shared/shared.module";
+import { MaterialModule } from "../../../shared/material/material.module";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 

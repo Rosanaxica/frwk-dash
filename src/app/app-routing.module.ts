@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: "dash",
     loadChildren: () =>
-      import("./shared/layout/layout.module").then((m) => m.LayoutModule),
+      import("./core/layout/layout.module").then((m) => m.LayoutModule),
   },
   {
     path: "**",

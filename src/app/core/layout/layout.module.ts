@@ -1,6 +1,6 @@
 import { SidenavService } from './sidenav.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SharedModule } from './../shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
