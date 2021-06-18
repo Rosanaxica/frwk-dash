@@ -1,7 +1,7 @@
 
 # FrwkDash - Resumo
 Projeto em angular 8 , angular material (componentes) e boostrap 4(grid) para  consumo da api [jsonAPi](https://jsonplaceholder.typicode.com/)
-Esse projeto utiliza a arquietura Feature / Shared/ Core para organização dos componentes e dados.
+Esse projeto utiliza a arquiteura Feature / Shared/ Core para organização dos componentes e dados.
 Seus módulos feature são carregados sob lazy loading visando a melhoria de performance da aplicação.
 
 
