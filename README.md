@@ -7,7 +7,7 @@ Para desenvovimento sem consumo excessivo da api proposta foi utilizado a extens
 
 
 
-# FrwkDash - Protótpo Inicial
+# FrwkDash - Protótipo Inicial
 Criado com a finalidade de direcionar o desenvolvimento.
 
 [Figma](https://www.figma.com/file/6dOHZGxGYNHMcMhfWuh4Yr/Framework?node-id=0%3A1).
