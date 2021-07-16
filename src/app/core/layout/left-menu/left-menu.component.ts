@@ -1,17 +1,26 @@
+import { IUser } from "./../../interfaces/IUser";
 import { SidenavService } from "../sidenav.service";
-import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from "@angular/core";
 import { onSideNavChange, animateText } from "../animations/animations";
 
 @Component({
   selector: "app-left-menu",
   templateUrl: "./left-menu.component.html",
   styleUrls: ["./left-menu.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [onSideNavChange, animateText],
 })
-export class LeftMenuComponent implements OnInit {
+export class LeftMenuComponent implements OnChanges {
+  @Input() user: IUser = null;
   public sideNavState: boolean = false;
   public linkText: boolean = false;
+  public loggedUser: IUser = null;
 
   public pages: any[] = [
     { name: "Dashboard", link: "../dash", icon: "home" },
@@ -24,7 +33,6 @@ export class LeftMenuComponent implements OnInit {
 
   ngOnInit() {}
 
-  
   onSidenavToggle() {
     this.sideNavState = !this.sideNavState;
 
@@ -32,5 +40,14 @@ export class LeftMenuComponent implements OnInit {
       this.linkText = this.sideNavState;
     }, 200);
     this._sidenavService.sideNavState$.next(this.sideNavState);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    for (let key in changes) {
+      if (key === "user") {
+        this.loggedUser = changes[key].currentValue;
+        console.log(`user :${this.loggedUser}`);
+      }
+    }
   }
 }

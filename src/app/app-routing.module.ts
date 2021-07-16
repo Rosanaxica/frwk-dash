@@ -1,3 +1,4 @@
+import { AuthGuard } from './core/guards/auth-guard';
 import { LoginComponent } from './public/components/login/login.component';
 import { Error404Component } from "./public/components/error404/error404.component";
 import { NgModule } from "@angular/core";
@@ -12,6 +13,7 @@ const routes: Routes = [
     path: "dash",
     loadChildren: () =>
       import("./core/layout/layout.module").then((m) => m.LayoutModule),
+      canActivate:[AuthGuard]
   },
   {
     path: "**",

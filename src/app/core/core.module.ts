@@ -1,5 +1,9 @@
+import { AuthGuard } from './guards/auth-guard';
+import { AuthService } from './auth/services/auth.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { UserAuthDataService } from './auth/user-auth-data.service';
 
 
 
@@ -10,6 +14,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
   
-  ]
+  ],
+  providers:[UserAuthDataService, AuthService, AuthGuard]
 })
 export class CoreModule { }

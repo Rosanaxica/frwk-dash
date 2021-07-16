@@ -18,8 +18,8 @@ export class AlbumService {
     return this.http.get<IAlbum[]>(`${environment.baseUrl}${this.context}`).pipe(map((resp) => resp));
   }
 
-  getAlbum(): Observable<IAlbum> {
-    return this.http.get<IAlbum>(`${environment.baseUrl}${this.context}`).pipe(map((resp) => resp));
+  getAlbum(albumId): Observable<IAlbum> {
+    return this.http.get<IAlbum>(`${environment.baseUrl}${this.context}/${albumId}`).pipe(map((resp) => resp));
   }
 
   addAlbum(user: IAlbum) {
