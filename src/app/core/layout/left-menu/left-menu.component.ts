@@ -43,10 +43,13 @@ export class LeftMenuComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    for (let key in changes) {
-      if (key === "user") {
-        this.loggedUser = changes[key].currentValue;
-        console.log(`user :${this.loggedUser}`);
+    for (let prop in changes) {
+      if (prop === "user") {
+        console.log(changes[prop]);
+        if (!changes[prop].firstChange) {
+          this.loggedUser = changes[prop].currentValue;
+          console.log(`user :${this.loggedUser}`);
+        }
       }
     }
   }

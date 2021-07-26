@@ -1,4 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+} from "@angular/core";
 
 @Component({
   selector: "app-image-container",
@@ -8,7 +15,16 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from "@angular/core
 })
 export class ImageContainerComponent implements OnInit {
   @Input() image;
+  @Output() onEditItem = new EventEmitter();
+  @Output() onDeleteItem = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
+
+  editItem(id) {
+    this.onEditItem.emit(id);
+  }
+  deleteItem(id) {
+    this.onDeleteItem.emit(id);
+  }
 }

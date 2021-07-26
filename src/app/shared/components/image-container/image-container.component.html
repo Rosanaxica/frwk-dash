@@ -9,6 +9,6 @@
     alt="Photo of a album"
   />
   <mat-card-actions>
-    <app-button-group (primaryButton)="editItem()"  (secondaryButton)="deleteItem()"></app-button-group>
+    <app-button-group (primaryButton)="editItem(image.id)"  (secondaryButton)="deleteItem(image.id)"></app-button-group>
   </mat-card-actions>
 </mat-card>

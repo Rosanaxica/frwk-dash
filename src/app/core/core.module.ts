@@ -1,3 +1,4 @@
+import { AlbumDeactivateGuard } from './guards/albums-deactivate-guard';
 import { AuthGuard } from './guards/auth-guard';
 import { AuthService } from './auth/services/auth.service';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,6 @@ import { UserAuthDataService } from './auth/user-auth-data.service';
     CommonModule,
   
   ],
-  providers:[UserAuthDataService, AuthService, AuthGuard]
+  providers:[UserAuthDataService, AuthService, AuthGuard, AlbumDeactivateGuard]
 })
 export class CoreModule { }

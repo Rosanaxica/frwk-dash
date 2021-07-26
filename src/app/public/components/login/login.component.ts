@@ -43,9 +43,9 @@ export class LoginComponent implements OnInit {
   
 
   doLogin() {
-    this.userData.user$.next(this.user);
+    this.userData.setUserData(this.user);
     let userLogged = {
-      user: "Rosana",
+      email: "Rosana",
       pass: "1234",
     };
     this.authService.doLogin(userLogged);

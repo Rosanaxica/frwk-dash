@@ -89,20 +89,6 @@
       "title": "eveniet pariatur quia nobis reiciendis laboriosam ea",
       "url": "https://via.placeholder.com/600/121fa4",
       "thumbnailUrl": "https://via.placeholder.com/150/121fa4"
-    },
-    {
-      "albumId": 3,
-      "id": 101,
-      "title": "incidunt alias vel enim",
-      "url": "https://via.placeholder.com/600/e743b",
-      "thumbnailUrl": "https://via.placeholder.com/150/e743b"
-    },
-    {
-      "albumId": 3,
-      "id": 102,
-      "title": "eaque iste corporis tempora vero distinctio consequuntur nisi nesciunt",
-      "url": "https://via.placeholder.com/600/a393af",
-      "thumbnailUrl": "https://via.placeholder.com/150/a393af"
     }
   ],
   "albums": [
@@ -115,11 +101,6 @@
       "userId": 1,
       "id": 2,
       "title": "sunt qui excepturi placeat culpa"
-    },
-    {
-      "userId": 1,
-      "id": 3,
-      "title": "omnis laborum odio"
     }
   ],
   "todos": [
@@ -248,20 +229,6 @@
       "name": "eaque et deleniti atque tenetur ut quo ut",
       "email": "Carmen_Keeling@caroline.name",
       "body": "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis"
-    },
-    {
-      "postId": 3,
-      "id": 11,
-      "name": "fugit labore quia mollitia quas deserunt nostrum sunt",
-      "email": "Veronica_Goodwin@timmothy.net",
-      "body": "ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea"
-    },
-    {
-      "postId": 3,
-      "id": 12,
-      "name": "modi ut eos dolores illum nam dolor",
-      "email": "Oswald.Vandervort@leanne.org",
-      "body": "expedita maiores dignissimos facilis\nipsum est rem est fugit velit sequi\neum odio dolores dolor totam\noccaecati ratione eius rem velit"
     }
   ]
 }

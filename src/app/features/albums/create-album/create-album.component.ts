@@ -1,4 +1,4 @@
-import { IAlbum } from './../../../core/interfaces/IAlbum';
+import { IAlbum } from "./../../../core/interfaces/IAlbum";
 import { AlbumService } from "../../../core/services/album.service";
 
 import {
@@ -28,12 +28,11 @@ export class CreateAlbumComponent implements OnInit, OnDestroy {
   ) {}
   formAlbum: FormGroup;
   ngOnInit() {
+    this.createForm();
     this.urlId = this.route.params.subscribe((params) => {
-      this.id = params["id"];
-      if (this.id !== 0) {
-        this.getAlbumToEdit(this.id);
-      } else {
-        this.createForm();
+      const id = params["id"];
+      if (id) {
+        this.getAlbumToEdit(id);
       }
     });
   }
@@ -45,26 +44,25 @@ export class CreateAlbumComponent implements OnInit, OnDestroy {
   }
 
   getAlbumToEdit(id) {
-    let returnedAlbum:IAlbum
-    this.albumService.getAlbum(id).subscribe(resp=>{returnedAlbum=resp
-      this.createForm(returnedAlbum);
-    });
+    let returnedAlbum: IAlbum;
 
-    
+    this.albumService.getAlbum(id).subscribe((resp) => {
+      returnedAlbum = resp;
+      this.updateForm(returnedAlbum);
+    });
   }
 
-  createForm(album?:IAlbum) {
-    this.formAlbum = new FormGroup({})
-    if(album){
-      this.formAlbum = new FormGroup({
-        title: new FormControl(album.title, Validators.required),
-      });
+  createForm() {
+    this.formAlbum = new FormGroup({
+      title: new FormControl("", Validators.required),
+    });
+  }
 
-    }else{
-      this.formAlbum = new FormGroup({
-        title: new FormControl("", Validators.required),
+  updateForm(album) {
+    if (album) {
+      this.formAlbum.patchValue({
+        title: album.title,
       });
-
     }
   }
 

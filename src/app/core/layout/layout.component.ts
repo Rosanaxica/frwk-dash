@@ -1,9 +1,10 @@
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable } from "rxjs";
 import { IUser } from "./../interfaces/IUser";
 import { UserAuthDataService } from "./../auth/user-auth-data.service";
 import { SidenavService } from "./sidenav.service";
 import { Component, OnInit } from "@angular/core";
 import { onMainContentChange } from "./animations/animations";
+import { tap } from "rxjs/operators";
 
 @Component({
   templateUrl: "./layout.component.html",
@@ -12,7 +13,7 @@ import { onMainContentChange } from "./animations/animations";
 })
 export class LayoutComponent implements OnInit {
   public onSideNavChange: boolean;
-  public user:  Observable<IUser>;
+  public user$;
 
   constructor(
     private _sidenavService: SidenavService,
@@ -23,9 +24,6 @@ export class LayoutComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.user = this.userData.user$
+    this.user$ = this.userData.getUserData();
   }
-
-
-  
 }

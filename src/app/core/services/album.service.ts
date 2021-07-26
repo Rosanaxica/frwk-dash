@@ -19,6 +19,7 @@ export class AlbumService {
   }
 
   getAlbum(albumId): Observable<IAlbum> {
+    console.log(albumId)
     return this.http.get<IAlbum>(`${environment.baseUrl}${this.context}/${albumId}`).pipe(map((resp) => resp));
   }
 
@@ -32,10 +33,11 @@ export class AlbumService {
       .pipe(map((resp) => resp));
   }
 
-  deleteAlbum(User: IAlbum) {
+  deleteAlbum(albumId) {
     return this.http
-      .delete(`${environment.baseUrl}${this.context}/${User.id}`)
-      .pipe(map((resp) => resp));
+      .delete(`${environment.baseUrl}${this.context}/${albumId}`)
+      .pipe(map((resp) => this.getAlbums()))
+  
   }
 
 

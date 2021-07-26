@@ -10,6 +10,7 @@ export class AuthService {
 
   doLogin(user) {
     if (user.email === "Rosana" && user.pass === "1234") {
+      this.userAuthenticated = true;
       this.router.navigate(["dash"]);
     }
   }

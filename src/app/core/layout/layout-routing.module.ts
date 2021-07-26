@@ -18,25 +18,30 @@ const routes: Routes = [{
       path: "albums",
       loadChildren: () =>
         import("../../features/albums/albums.module").then((m) => m.AlbumsModule),
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canLoad:[AuthGuard]
     },
     {
       path: "todos",
       loadChildren: () =>
         import("../../features/todos/todos.module").then((m) => m.TodosModule),
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canLoad:[AuthGuard]
     },
     {
       path: "posts",
       loadChildren: () =>
         import("../../features/posts/posts.module").then((m) => m.PostsModule),
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canLoad:[AuthGuard]
+        
     },
     {
       path: "photos",
       loadChildren: () =>
         import("../../features/photos/photos.module").then((m) => m.PhotosModule),
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canLoad:[AuthGuard]
     },
     
     

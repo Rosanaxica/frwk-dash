@@ -6,8 +6,8 @@
       <div class="col" *ngFor="let album of listAlbums">
         <app-image-container
           [image]="album"
-          (onEditClick)="editItem($event)"
-          (onDeleteClick)="deleteItem($event)"
+          (onEditItem)="editItem($event)"
+          (onDeleteItem)="deleteItem($event)"
         ></app-image-container>
       </div>
     </div>

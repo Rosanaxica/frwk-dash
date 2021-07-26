@@ -25,4 +25,13 @@ export class AlbumsComponent implements OnInit {
   addAlbum() {
     this.router.navigate(["create"], { relativeTo: this.route });
   }
+  editItem(albumId){  
+    this.router.navigate([albumId], { relativeTo: this.route });
+
+  }
+  deleteItem(albumId){ 
+    
+    this.albumService.deleteAlbum(albumId).subscribe(resp=>resp)
+
+  }
 }
