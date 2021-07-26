@@ -1,3 +1,4 @@
+import { CrudService } from './../auth/services/crud-service';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment.prod';
 import { IPhoto } from '../interfaces/IPhoto';
@@ -8,32 +9,12 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class PhotosService {
-  constructor(public http: HttpClient) {}
+export class PhotosService extends CrudService<IPhoto>{
 
-  private context = "/photos";
 
-  getPhotos(): Observable<IPhoto[]> {
-    return this.http.get<IPhoto[]>(`${environment.baseUrl}${this.context}`).pipe(map((resp) => resp));
+  constructor(public http: HttpClient) {
+    super(http,"/photos")
   }
 
-    getPhoto(): Observable<IPhoto> {
-    return this.http.get<IPhoto>(this.context).pipe(map((resp) => resp));
-  }
 
-  addPhoto(photo: IPhoto) {
-    return this.http.post(`${environment.baseUrl}${this.context}`, photo).pipe(map((resp) => resp));
-  }
-
-  updatePhoto(photo: IPhoto) {
-    return this.http
-      .put(`${environment.baseUrl}${this.context}/${photo.id}`, photo)
-      .pipe(map((resp) => resp));
-  }
-
-  deletePhoto(photo: IPhoto) {
-    return this.http
-      .delete(`${environment.baseUrl}${this.context}/${photo.id}`)
-      .pipe(map((resp) => resp));
-  }
 }

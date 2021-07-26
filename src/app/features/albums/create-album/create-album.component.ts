@@ -62,6 +62,7 @@ export class CreateAlbumComponent implements OnInit {
     if (album) {
       this.formAlbum.patchValue({
         title: album.title,
+        id: album.id,
       });
     }
   }
@@ -72,7 +73,12 @@ export class CreateAlbumComponent implements OnInit {
       title: this.formAlbum.controls["title"].value,
       body: this.formAlbum.controls["body"].value,
     };
-    this.albumService.addAlbum(album).subscribe((resp) => resp);
+
+    if (this.formAlbum.value.id) {
+      this.albumService.updateAlbum(album).subscribe((resp) => resp);
+    } else {
+      this.albumService.addAlbum(album).subscribe((resp) => resp);
+    }
   }
   submit() {
     if (this.formAlbum.valid) {
