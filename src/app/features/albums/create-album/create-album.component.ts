@@ -12,12 +12,13 @@ import { ITodo } from "src/app/core/interfaces/ITodo";
 import { TodoService } from "src/app/core/services/todo.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs";
+import { map, switchMap } from "rxjs/operators";
 
 @Component({
   templateUrl: "./create-album.component.html",
   styleUrls: ["./create-album.component.scss"],
 })
-export class CreateAlbumComponent implements OnInit, OnDestroy {
+export class CreateAlbumComponent implements OnInit {
   public id: number = 0;
   public urlId: Subscription;
   constructor(
@@ -29,27 +30,26 @@ export class CreateAlbumComponent implements OnInit, OnDestroy {
   formAlbum: FormGroup;
   ngOnInit() {
     this.createForm();
-    this.urlId = this.route.params.subscribe((params) => {
-      const id = params["id"];
-      if (id) {
-        this.getAlbumToEdit(id);
-      }
-    });
-  }
+    //observables aninhados
+    this.route.params
+      .pipe(
+        map((params: any) => params["id"]),
+        switchMap((id) => this.albumService.getAlbum(id))
+      )
+      .subscribe((album) => {
+        this.updateForm(album);
+      });
 
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.urlId.unsubscribe();
+    // this.route.params.subscribe((params) => {
+    //   const id = params["id"];
+    //   if (id) {
+    //     this.getAlbumToEdit(id);
+    //   }
+    // });
   }
 
   getAlbumToEdit(id) {
-    let returnedAlbum: IAlbum;
-
-    this.albumService.getAlbum(id).subscribe((resp) => {
-      returnedAlbum = resp;
-      this.updateForm(returnedAlbum);
-    });
+    return;
   }
 
   createForm() {
